@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دانشکده علوم تربیتی</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Tahoma,Arial,sans-serif;background:#f6f8f7;color:#17211e;line-height:1.9}
+a{text-decoration:none;color:inherit}
+.site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e2ebe6}
+.header-container{width:min(1180px,90%);min-height:85px;margin:auto;display:flex;align-items:center;gap:18px}
+.logo{width:60px;height:60px;border-radius:50%;background:#edf5f1;border:1px solid #d8e6df;overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:contain}
+.header-title{flex:1}.header-title h1{font-size:20px;color:#075c45}.header-title p{font-size:13px;color:#68756f}
+.nav{display:flex;gap:25px}.nav a{font-size:14px;color:#34423d}.nav a:hover{color:#087f5b}
+
+.hero{background:linear-gradient(135deg,#edf7f2,#f8fbfa,#e7f1ed);border-bottom:1px solid #e0ebe5}
+.hero-inner{width:min(1180px,90%);min-height:420px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-label{color:#087f5b;font-size:14px;font-weight:bold}
+.hero h2{font-size:clamp(36px,5vw,58px);line-height:1.35;color:#083d30;margin:12px 0 20px}
+.hero p{max-width:570px;color:#596861;font-size:15px}
+.hero-img{height:310px;border:2px dashed #b8c9c1;border-radius:28px;background:#e1e9e5;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+
+.section{padding:90px 0}
+.container{width:min(950px,90%);margin:auto}
+.heading{text-align:center;margin-bottom:45px}.heading span{color:#087f5b;font-size:14px;font-weight:bold}
+.heading h2{font-size:34px;color:#123c31}.heading p{font-size:14px;color:#707d77;margin-top:8px}
+.line{width:55px;height:3px;background:#087f5b;border-radius:20px;margin:14px auto}
+
+.department-list{display:flex;flex-direction:column;gap:16px}
+.department{background:#fff;border:1px solid #dfe9e4;border-radius:18px;overflow:hidden;box-shadow:0 5px 20px rgba(20,65,52,.04)}
+.department-button{width:100%;border:0;background:#fff;padding:23px 27px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-family:inherit;color:#173f34;text-align:right}
+.department-button:hover{background:#f8fbf9}
+.department-name{display:flex;align-items:center;gap:15px;font-size:19px;font-weight:bold}
+.number{width:42px;height:42px;border-radius:50%;background:#eaf4ef;color:#087f5b;display:flex;align-items:center;justify-content:center;font-size:14px}
+.arrow{width:35px;height:35px;border-radius:50%;background:#f0f5f2;color:#087f5b;display:flex;align-items:center;justify-content:center;transition:.3s}
+.department.active .arrow{transform:rotate(180deg)}
+.content{max-height:0;overflow:hidden;transition:max-height .4s ease;background:#f8faf9}
+.department.active .content{max-height:600px}
+.submenu{padding:8px 27px 24px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.submenu a{background:#fff;border:1px solid #e3ebe7;border-radius:10px;padding:12px 16px;color:#46554e;font-size:14px;display:flex;justify-content:space-between;transition:.2s}
+.submenu a::after{content:"←";color:#087f5b}
+.submenu a:hover{color:#087f5b;border-color:#a9c9bb;background:#f1f8f4;transform:translateX(-3px)}
+
+.about{background:#edf3f0}.about-box{background:#fff;border:1px solid #dfe8e3;border-radius:22px;padding:35px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about h3{font-size:25px;color:#075c45;margin-bottom:12px}.about p{font-size:14px;color:#66736d}
+.about-img{height:230px;border:2px dashed #bdcbc4;border-radius:18px;background:#e2e9e6;overflow:hidden}.about-img img{width:100%;height:100%;object-fit:cover}
+
+footer{background:#092f26;color:#fff;padding:40px 0}.footer{width:min(1180px,90%);margin:auto;display:flex;justify-content:space-between;gap:25px;align-items:center}.footer p{color:#b8cbc4;font-size:13px}.footer-links{display:flex;gap:22px}.footer-links a{font-size:13px;color:#d6e2dd}
+
+@media(max-width:900px){.nav{display:none}.hero-inner{grid-template-columns:1fr;padding:65px 0;gap:30px}.about-box{grid-template-columns:1fr}.footer{flex-direction:column;text-align:center}}
+@media(max-width:600px){.header-container{min-height:72px}.logo{width:50px;height:50px}.header-title h1{font-size:16px}.header-title p{font-size:11px}.hero h2{font-size:37px}.hero-img{height:240px}.section{padding:65px 0}.heading h2{font-size:28px}.department-name{font-size:16px}.submenu{grid-template-columns:1fr;padding:8px 15px 20px}.about-box{padding:25px}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<div class="header-container">
+<a href="" class="logo">
+<!-- آدرس لوگو را اینجا وارد کن -->
+<img src="images (1).png" alt="لوگوی دانشگاه فرهنگیان">
+</a>
+<div class="header-title">
+<h1>دانشکده علوم تربیتی</h1>
+<p>دانشگاه فرهنگیان استان خراسان رضوی</p>
+</div>
+<nav class="nav">
+<a href="index.html">صفحه اصلی</a>
+<a href="#departments">بخش‌ها</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+<div>
+<span class="hero-label">دانشگاه فرهنگیان استان خراسان رضوی</span>
+<h2>دانشکده<br>علوم تربیتی</h2>
+<p>دانشکده علوم تربیتی با تمرکز بر تعلیم و تربیت، روان‌شناسی و مهارت‌های حرفه‌ای معلمی، محیطی علمی و پویا برای رشد و توانمندسازی دانشجو معلمان فراهم می‌کند.</p>
+</div>
+<div class="hero-img">
+<!-- آدرس عکس را اینجا وارد کن -->
+<img src="photo_2026-08-18_15-52-32.jpg" alt="دانشکده علوم تربیتی">
+</div>
+</div>
+</section>
+
+<section class="section" id="departments">
+<div class="container">
+<div class="heading">
+<span>بخش‌های دانشکده</span>
+<h2>خدمات و معاونت‌ها</h2>
+<div class="line"></div>
+<p>برای مشاهده خدمات هر بخش، روی عنوان آن کلیک کنید.</p>
+</div>
+
+<div class="department-list">
+
+<div class="department">
+<button class="department-button" type="button">
+<div class="department-name"><span class="number">۰۱</span><span>معاونت آموزشی</span></div>
+<span class="arrow">▼</span>
+</button>
+<div class="content"><div class="submenu">
+<a href="https://digiform.ir/wd3f520ea3">تحت نظر</a>
+<a href="">هم نیازی</a>
+<a href="">معادل سازی</a>
+<a href="">غیبت</a>
+<a href="">حمایت از خانواده</a>
+<a href="">بازدید</a>
+<a href="">حذف و اضافه</a>
+<a href="">استعداد های درخشان</a>
+</div></div>
+</div>
+
+<div class="department">
+<button class="department-button" type="button">
+<div class="department-name"><span class="number">۰۲</span><span>معاونت فرهنگی</span></div>
+<span class="arrow">▼</span>
+</button>
+<div class="content"><div class="submenu">
+<a href="">تحت نظر</a>
+<a href="">هم نیازی</a>
+<a href="">معادل سازی</a>
+<a href="">غیبت</a>
+<a href="">حمایت از خانواده</a>
+<a href="">بازدید</a>
+<a href="">حذف و اضافه</a>
+<a href="">استعداد های درخشان</a>
+</div></div>
+</div>
+
+<div class="department">
+<button class="department-button" type="button">
+<div class="department-name"><span class="number">۰۳</span><span>حراست</span></div>
+<span class="arrow">▼</span>
+</button>
+<div class="content"><div class="submenu">
+<a href="">تحت نظر</a>
+<a href="">هم نیازی</a>
+<a href="">معادل سازی</a>
+<a href="">غیبت</a>
+<a href="">حمایت از خانواده</a>
+<a href="">بازدید</a>
+<a href="">حذف و اضافه</a>
+<a href="">استعداد های درخشان</a>
+</div></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+<div class="footer">
+<div><strong>دانشکده علوم تربیتی</strong><p>دانشگاه فرهنگیان استان خراسان رضوی</p></div>
+<div class="footer-links">
+<a href="index.html">صفحه اصلی</a>
+<a href="#departments">بخش‌ها</a>
+     <div class="footer-copy">
+            <p>
+                طراحی شده توسط محمدعارف نوروزی رودی <br>رشته دبیری کاروفناوری <br>شهریور 1405
+            </p>
+        </div>
+</div>
+</div>
+</footer>
+
+<script>
+document.querySelectorAll(".department").forEach(function(department){
+department.querySelector(".department-button").addEventListener("click",function(){
+document.querySelectorAll(".department").forEach(function(other){
+if(other!==department) other.classList.remove("active");
+});
+department.classList.toggle("active");
+});
+});
+</script>
+
+</body>
+</html>
